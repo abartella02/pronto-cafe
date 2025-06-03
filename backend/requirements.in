@@ -1,0 +1,16 @@
+# Web framework
+Django>=4.2,<5.0
+
+# PostgreSQL support
+psycopg2-binary>=2.9
+
+# CORS handling (for local dev between React and Django)
+django-cors-headers>=4.0
+
+# Environment variable support
+python-dotenv>=1.0
+
+# Production serving (optional but common for Dockerized apps)
+gunicorn>=21.2
+
+djangorestframework>=3.16
