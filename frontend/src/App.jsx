@@ -47,7 +47,7 @@ function App() {
 
 		return (
 			<>
-			<table className="text-xl sm:text-2xl lg:text-4xl font-serif text-gray-700 m-3">
+			<table className="text-xl sm:text-2xl lg:text-4xl font-serif text-gray-700">
 				<tbody>
 					{flavours.map((_, index) => (
 						<tr key={index}>
@@ -122,7 +122,7 @@ function App() {
 			</p>
 
 
-			<div>
+			<div className="pb-2">
  				<FlavoursTable/>
 			</div>
 			<p>V = Vegan</p>
