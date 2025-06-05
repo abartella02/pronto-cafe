@@ -79,7 +79,7 @@ function App() {
 				<tbody>
 					{sizes.map((row, index) => (
 						<tr key={index}>
-							<td className="text-left py-2 pr-8 md:pr-50">{row.name.toProperCase()}</td>
+							<td className="text-left py-2 pr-20 md:pr-50">{row.name.toProperCase()}</td>
 							<td className="text-right py-2">{isNaN(row.price) ? ``:`$`}{row.price}</td>
 						</tr>
 					))}
