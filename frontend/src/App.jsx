@@ -144,19 +144,19 @@ function App() {
 		  		<tbody>
 		  			<tr>
 		  				<td className="text-left pr-4 pb-3"><i className="fa fa-phone"/></td>
-		  				<td className="text-left">(905) 832-5216</td>
+		  				<td className="text-left pb-3">(905) 832-5216</td>
 		  			</tr>
 		  			<tr>
 		  				<td className="text-left pb-3"><i className="fa fa-instagram"/></td>
-		  				<td className="text-left">@_prontocafe</td>
+		  				<td className="text-left pb-3">@_prontocafe</td>
 		  			</tr>
 		  			<tr>
 		  				<td className="text-left pb-3"><i className="fa fa-envelope-o"/></td>
-		  				<td className="text-left">orders@prontocafegelato.com</td>
+		  				<td className="text-left pb-3">orders@prontocafegelato.com</td>
 		  			</tr>
 		  			<tr>
 		  				<td className="text-left pb-3"><i className="fa fa-map-marker"/></td>
-		  				<td className="text-left">9222 Keele Street, Vaughan, ON L4k 5A3</td>
+		  				<td className="text-left pb-3">9222 Keele Street, Vaughan, ON L4k 5A3</td>
 		  			</tr>
 		  		</tbody>
 		  	</table>
