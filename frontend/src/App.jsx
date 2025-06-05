@@ -93,10 +93,7 @@ function App() {
     <>
     	{/* Hero */}
 		<div className="w-full min-h-screen flex flex-col bg-gray-500 overflow-x-hidden">
-		  <div
-		  	className="bg-fixed justify-center w-full flex flex-col items-center bg-contain sm:bg-cover bg-center bg-no-repeat min-h-[100vh]"
-		  	style={{ backgroundImage: "url('/gelato.jpg')"}}
-		  	>
+		<div className="bg-fixed justify-center w-full flex flex-col items-center bg-cover bg-top sm:bg-center min-h-[100vh]" style={{ backgroundImage: "url('/gelato.jpg')" }}>
 			<div className="backdrop-blur-lg bg-[#e4d5b7]/4 rounded-3xl shadow-xl/20 items-center text-center m-10">
 				<h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white font-serif p-5">PRONTO CAFE</h1>
 		  	</div>
