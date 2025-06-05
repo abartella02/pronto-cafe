@@ -10,7 +10,7 @@ function App() {
 	function OperatingHoursTable() {
 		const [hours, setHours] = useState([]);
 		useEffect(() => {
-		fetch('http://prontocafegelate/api/hours')
+		fetch('https://prontocafegelate/api/hours')
 			.then(res => res.json())
 			.then(data => setHours(data))
 			.catch(err => console.error('Failed to fetch hours:', err));
@@ -35,7 +35,7 @@ function App() {
 	function FlavoursTable() {
 		const [flavours, setFlavours] = useState([]);
 		useEffect(() => {
-		fetch('http://prontocafegelate/api/flavours')
+		fetch('https://prontocafegelate/api/flavours')
 			.then(res => res.json())
 			.then(data => setFlavours(data))
 			.catch(err => console.error('Failed to fetch flavours:', err));
@@ -64,7 +64,7 @@ function App() {
 	function SizesTable() {
 		const [sizes, setSizes] = useState([]);
 		useEffect(() => {
-		fetch('http://prontocafegelate/api/sizes')
+		fetch('https://prontocafegelate/api/sizes')
 			.then(res => res.json())
 			.then(data => {
 			  const sorted = [...data].sort((a, b) => a.price - b.price);
