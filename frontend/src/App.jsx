@@ -18,7 +18,7 @@ function App() {
 
 		return (
 			<>
-			<table className="text-lg md:text-4xl font-serif text-gray-500 m-5">
+			<table className="text-lg md:text-4xl font-serif text-gray-500 m-2">
 				<tbody>
 					{hours.map((row, index) => (
 						<tr key={index}>
