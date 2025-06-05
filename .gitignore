@@ -5,3 +5,4 @@ static/
 staticfiles/
 node_modules/
 dist/
+.env

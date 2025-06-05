@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +28,7 @@ SECRET_KEY = 'REMOVED'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['REMOVED', 'your.domain.com', 'REMOVED']
 
 
 # Application definition
@@ -81,7 +83,7 @@ if os.environ.get('POSTGRES_DB'):
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': os.environ.get('POSTGRES_DB', 'mydb'),
+            'NAME': os.environ.get('POSTGRES_DB', 'db'),
             'USER': os.environ.get('POSTGRES_USER', 'username'),
             'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'password'),
             'HOST': os.environ.get('DB_HOST', 'db'),  # matches the service name in docker-compose.yml
