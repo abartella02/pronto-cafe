@@ -21,14 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'REMOVED'
+SECRET_KEY=os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['REMOVED', 'your.domain.com', 'REMOVED']
+ALLOWED_HOSTS = ['REMOVED', 'www.prontocafegelato.com', 'prontocafegelato.com', 'REMOVED']
 
 
 # Application definition
@@ -61,7 +59,7 @@ ROOT_URLCONF = 'backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'static', 'frontend')],
+        'DIRS': [os.path.join(BASE_DIR, 'static', 'frontend'), os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -85,7 +83,7 @@ DATABASES = {
         'NAME': os.environ.get('POSTGRES_DB', 'db'),
         'USER': os.environ.get('POSTGRES_USER', 'username'),
         'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'password'),
-        'HOST': os.environ.get('DB_HOST', 'db'),  # matches the service name in docker-compose.yml
+        'HOST': os.environ.get('DB_HOST', 'db'),
         'PORT': os.environ.get('DB_PORT', 'REMOVED'),
     }
 }
@@ -137,37 +135,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = False
 
-CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:5173",
-    "http://REMOVED:5173",
-    "http://127.0.0.1",
-    "http://127.0.0.1:80",
-    "http://REMOVED",
-    "http://REMOVED:80",
-]
-
-CSRF_TRUSTED_ORIGINS = [
-    "http://127.0.0.1:5173",
-    "http://REMOVED:5173",
-    "http://127.0.0.1",
-    "http://127.0.0.1:80",
-    "http://REMOVED",
-    "http://REMOVED:80",
-]
-
-CORS_ORIGIN_WHITELIST = [
-    "http://127.0.0.1:5173",
-    "http://REMOVED:5173",
-    "http://127.0.0.1",
-    "http://127.0.0.1:80",
-    "http://REMOVED",
-    "http://REMOVED:80",
-]
-
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 TEMPLATES[0]['DIRS'] = [BASE_DIR / "templates"]
-
-
