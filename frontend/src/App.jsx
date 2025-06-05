@@ -47,12 +47,12 @@ function App() {
 
 		return (
 			<>
-			<table className="text-xl sm:text-2xl lg:text-4xl font-serif text-gray-700">
+			<table className="text-xl sm:text-2xl lg:text-4xl font-serif text-gray-700 mt-2 mb-3">
 				<tbody>
-					{flavours.map((_, index) => (
+					{Array.from({length: midpoint}).map((_, index) => (
 						<tr key={index}>
-							<td className="text-left py-1 pr-5 md:pr-20">{col1[index]?.vegan ? `${col1[index]?.name.toProperCase()} (V)` : col1[index]?.name.toProperCase()}</td>
-							<td className="text-left py-1">{col2[index]?.vegan ? `${col2[index]?.name.toProperCase()} (V)` : col2[index]?.name.toProperCase()}</td>
+							<td className="text-left py-1 pr-5 md:pr-20">{col1[index] && (col1[index]?.vegan ? `${col1[index]?.name.toProperCase()} (V)` : col1[index]?.name.toProperCase())}</td>
+							<td className="text-left py-1">{col2[index] && (col2[index]?.vegan ? `${col2[index]?.name.toProperCase()} (V)` : col2[index]?.name.toProperCase())}</td>
 						</tr>
 					))}
 				</tbody>
@@ -112,20 +112,18 @@ function App() {
 
 		  {/* Flavours */}
 		  <div className="w-full p-8 pb-12 flex flex-col bg-[#f4f1de] items-center text-center">
-			<h1 className="text-4xl md:text-6xl font-bold text-gray-700 p-5 md:p-10 font-serif">
+			<h1 className="text-4xl md:text-6xl font-bold text-gray-700 p-5 md:p-10 md:pb-5 font-serif">
 				Flavours
 			</h1>
-			<p>
+			<p className="font-serif text-md sm:text-lg lg:text-xl md:pb-5">
 				Please be advised that all our flavours contain traces of&nbsp;
 				<span className="font-bold font-serif">peanuts, tree nuts, and gluten. </span>
 				Thank you for your cooperation.
 			</p>
-
-
-			<div className="pb-2">
+			<div>
  				<FlavoursTable/>
+ 				<p className="text-lg sm:text-xl lg:text-3xl font-serif text-gray-700">V = Vegan</p>
 			</div>
-			<p>V = Vegan</p>
 		  </div>
 
 		  {/* Gelato Sizes */}
