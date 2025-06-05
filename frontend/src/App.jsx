@@ -91,6 +91,7 @@ function App() {
 
   return (
     <>
+    	<div>
 		{/* Mobile Hero */}
 		<div className="block sm:hidden w-full min-h-screen flex flex-col bg-cover bg-top bg-no-repeat" style={{ backgroundImage: "url('/gelato-mobile.jpg')" }}>
 		  <div className="backdrop-blur-lg bg-[#e4d5b7]/40 rounded-3xl shadow-xl/20 items-center text-center m-10">
