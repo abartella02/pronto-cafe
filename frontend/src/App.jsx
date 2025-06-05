@@ -155,11 +155,11 @@ function App() {
 		  			</tr>
 		  			<tr>
 		  				<td className="text-left pb-3"><i className="fa fa-instagram"/></td>
-		  				<td className="text-left pb-3"><a href='https://www.instagram.com/_prontocafe/'>@_prontocafe</a></td>
+		  				<td className="text-left pb-3"><a className='underline' href='https://www.instagram.com/_prontocafe/'>@_prontocafe</a></td>
 		  			</tr>
 		  			<tr>
-		  				<td className="text-left text-underline pb-3"><i className="fa fa-envelope-o"/></td>
-		  				<td className="text-left text-underline pb-3"><a href='mailto:orders@prontocafegelato.com'>orders@prontocafegelato.com</a></td>
+		  				<td className="text-left pb-3"><i className="fa fa-envelope-o"/></td>
+		  				<td className="text-left pb-3"><a className='underline' href='mailto:orders@prontocafegelato.com'>orders@prontocafegelato.com</a></td>
 		  			</tr>
 		  			<tr>
 		  				<td className="text-left pb-3"><i className="fa fa-map-marker"/></td>
