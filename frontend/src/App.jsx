@@ -125,6 +125,7 @@ function App() {
 			<div>
  				<FlavoursTable/>
 			</div>
+			<p>V = Vegan</p>
 		  </div>
 
 		  {/* Gelato Sizes */}
