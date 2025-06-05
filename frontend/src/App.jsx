@@ -22,7 +22,7 @@ function App() {
 				<tbody>
 					{hours.map((row, index) => (
 						<tr key={index}>
-							<td className="text-left py-2 pr-8 md:pr-30">{row.day.toProperCase()}</td>
+							<td className="text-left py-2 pr-3 sm:pr-30">{row.day.toProperCase()}</td>
 							<td className="text-right py-2">{row.time}</td>
 						</tr>
 					))}
