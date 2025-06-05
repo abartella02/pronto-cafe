@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 String.prototype.toProperCase = function () {
@@ -11,7 +10,7 @@ function App() {
 	function OperatingHoursTable() {
 		const [hours, setHours] = useState([]);
 		useEffect(() => {
-		fetch('http://127.0.0.1:8000/api/hours')
+		fetch('http://prontocafegelate/api/hours')
 			.then(res => res.json())
 			.then(data => setHours(data))
 			.catch(err => console.error('Failed to fetch hours:', err));
@@ -36,7 +35,7 @@ function App() {
 	function FlavoursTable() {
 		const [flavours, setFlavours] = useState([]);
 		useEffect(() => {
-		fetch('http://127.0.0.1:8000/api/flavours')
+		fetch('http://prontocafegelate/api/flavours')
 			.then(res => res.json())
 			.then(data => setFlavours(data))
 			.catch(err => console.error('Failed to fetch flavours:', err));
@@ -65,7 +64,7 @@ function App() {
 	function SizesTable() {
 		const [sizes, setSizes] = useState([]);
 		useEffect(() => {
-		fetch('http://127.0.0.1:8000/api/sizes')
+		fetch('http://prontocafegelate/api/sizes')
 			.then(res => res.json())
 			.then(data => {
 			  const sorted = [...data].sort((a, b) => a.price - b.price);
