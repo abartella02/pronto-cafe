@@ -79,24 +79,17 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-if os.environ.get('POSTGRES_DB'):
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': os.environ.get('POSTGRES_DB', 'db'),
-            'USER': os.environ.get('POSTGRES_USER', 'username'),
-            'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'password'),
-            'HOST': os.environ.get('DB_HOST', 'db'),  # matches the service name in docker-compose.yml
-            'PORT': os.environ.get('DB_PORT', 'REMOVED'),
-        }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('POSTGRES_DB', 'db'),
+        'USER': os.environ.get('POSTGRES_USER', 'username'),
+        'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'password'),
+        'HOST': os.environ.get('DB_HOST', 'db'),  # matches the service name in docker-compose.yml
+        'PORT': os.environ.get('DB_PORT', 'REMOVED'),
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
+}
+
 
 
 
