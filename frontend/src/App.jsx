@@ -114,10 +114,10 @@ function App() {
 			<div>
 				{/* Mobile Hero */}
 				<div
-					className="block sm:hidden w-full min-h-screen flex justify-center items-center bg-cover bg-top bg-no-repeat"
+					className="block sm:hidden w-full min-h-screen bg-cover bg-top bg-no-repeat flex items-center justify-center"
 					style={{ backgroundImage: "url('/gelato-mobile.jpg')" }}
 				>
-					<div className="backdrop-blur-lg bg-[#e4d5b7]/40 rounded-3xl shadow-xl/20 items-center text-center m-10">
+					<div className="backdrop-blur-lg bg-[#e4d5b7]/40 rounded-3xl shadow-xl/20 text-center m-10">
 						<h1 className="text-5xl font-bold text-white font-serif p-5">
 							PRONTO CAFE
 						</h1>
@@ -126,10 +126,10 @@ function App() {
 
 				{/* Desktop/Tablet Hero */}
 				<div
-					className="hidden sm:flex w-full min-h-screen flex justify-center items-center bg-cover bg-center bg-no-repeat"
+					className="hidden sm:flex w-full min-h-screen bg-fixed bg-cover bg-center bg-no-repeat items-center justify-center"
 					style={{ backgroundImage: "url('/gelato.jpg')" }}
 				>
-					<div className="backdrop-blur-lg bg-[#e4d5b7]/40 rounded-3xl shadow-xl/20 items-center text-center m-10">
+					<div className="backdrop-blur-lg bg-[#e4d5b7]/40 rounded-3xl shadow-xl/20 text-center m-10">
 						<h1 className="text-7xl lg:text-8xl font-bold text-white font-serif p-5">
 							PRONTO CAFE
 						</h1>
