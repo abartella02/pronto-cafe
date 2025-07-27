@@ -212,9 +212,9 @@ function App() {
 								<td className="text-left pb-3">
 									<a
 										className="underline"
-										href="mailto:orders@prontocafegelato.com"
+										href="mailto:prontogelatoorders@gmail.com"
 									>
-										orders@prontocafegelato.com
+										prontogelatoorders@gmail.com
 									</a>
 								</td>
 							</tr>
