@@ -3,3 +3,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Title fade-in animation */
+.fade-in {
+	opacity: 0;
+	animation: fadeIn 2s ease forwards;
+	animation-duration: 2.5s;
+	animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+
+/* Slight zoom on landing page animation */
+.hero-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg::before {
+  content: "";
+  position: fixed; /* Changed from absolute */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  animation: zoomIn 3s ease-in-out forwards;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(1.08); } /* Start zoomed in */
+  to   { transform: scale(1); }    /* End at normal size */
+}

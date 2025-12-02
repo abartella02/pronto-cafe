@@ -11,10 +11,9 @@ if not SECRET_KEY:
     raise Exception("Missing SECRET_KEY environment variable")
 
 ALLOWED_HOSTS = [
-    os.environ.get("SERVER", "REMOVED"),
+    os.environ.get("SERVER"),
     "www.prontocafegelato.com",
     "prontocafegelato.com",
-    "REMOVED",
 ]
 
 # Application definition
@@ -72,7 +71,7 @@ DATABASES = {
         "USER": os.environ.get("POSTGRES_USER", "username"),
         "PASSWORD": os.environ.get("POSTGRES_PASSWORD", "password"),
         "HOST": os.environ.get("DB_HOST", "db"),
-        "PORT": os.environ.get("DB_PORT", "REMOVED"),
+        "PORT": os.environ.get("DB_PORT"),
     }
 }
 
