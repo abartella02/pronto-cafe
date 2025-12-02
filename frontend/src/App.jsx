@@ -22,12 +22,19 @@ function App() {
 				<table className="text-lg md:text-4xl font-serif text-gray-500 m-2">
 					<tbody>
 						{hours.map((row, index) => (
+							<>
 							<tr key={index}>
 								<td className="text-left py-2 pr-3 sm:pr-20 md:pr-30">
 									{row.day.toProperCase()}
 								</td>
 								<td className="text-right py-2">{row.time}</td>
 							</tr>
+							{row.day.toProperCase() === 'Sunday' && (
+								<tr key={`${index}--break`}>
+									<td colSpan='2'><div className="border-t-2 border-gray-400 rounded-md"></div></td>
+								</tr>
+							)}
+							</>
 						))}
 					</tbody>
 				</table>
@@ -117,27 +124,27 @@ function App() {
 					className="block sm:hidden w-full min-h-screen bg-cover bg-top bg-no-repeat flex items-center justify-center"
 					style={{ backgroundImage: "url('/gelato-mobile.jpg')" }}
 				>
-					<div className="backdrop-blur-lg bg-[#e4d5b7]/40 rounded-3xl shadow-xl/20 text-center m-10">
+					<div className="backdrop-blur-lg bg-[#e4d5b7]/40 rounded-3xl shadow-xl/20 text-center m-10 fade-in">
 						<h1 className="text-5xl font-bold text-white font-serif p-5">
-							PRONTO CAFE
+							PRONTO CAFÉ
 						</h1>
 					</div>
 				</div>
 
 				{/* Desktop/Tablet Hero */}
 				<div
-					className="hidden sm:flex w-full min-h-screen bg-fixed bg-cover bg-center bg-no-repeat items-center justify-center"
+					className="hidden sm:flex w-full min-h-screen bg-fixed bg-cover bg-center bg-no-repeat items-center justify-center hero-bg"
 					style={{ backgroundImage: "url('/gelato.jpg')" }}
 				>
-					<div className="backdrop-blur-lg bg-[#e4d5b7]/40 rounded-3xl shadow-xl/20 text-center m-10">
-						<h1 className="text-7xl lg:text-8xl font-bold text-white font-serif p-5">
-							PRONTO CAFE
+					<div className="backdrop-blur-lg bg-[#e4d5b7]/40 rounded-3xl shadow-xl/20 text-center m-10 fade-in">
+						<h1 className="text-7xl lg:text-8xl font-bold text-white font-serif p-5 fade-in">
+							PRONTO CAFÉ
 						</h1>
 					</div>
 				</div>
 
 				{/* Hours of operation */}
-				<div className="w-full p-8 pb-12 flex flex-col bg-white items-center text-center">
+				<div className="w-full p-8 pb-12 flex flex-col bg-white items-center text-center relative z-10">
 					<h1 className="text-4xl md:text-6xl font-bold text-gray-600 p-5 md:p-10 font-serif">
 						HOURS OF OPERATION
 					</h1>
@@ -148,7 +155,7 @@ function App() {
 				</div>
 
 				{/* Flavours */}
-				<div className="w-full p-8 pb-12 flex flex-col bg-[#f4f1de] items-center text-center">
+				<div className="w-full p-8 pb-12 flex flex-col bg-[#f4f1de] items-center text-center relative z-10">
 					<h1 className="text-4xl md:text-6xl font-bold text-gray-700 p-5 md:p-10 md:pb-5 font-serif">
 						Flavours
 					</h1>
@@ -169,7 +176,7 @@ function App() {
 				</div>
 
 				{/* Gelato Sizes */}
-				<div className="w-full p-8 pb-12 flex flex-col bg-white items-center text-center">
+				<div className="w-full p-8 pb-12 flex flex-col bg-white items-center text-center relative z-10">
 					<h1 className="text-4xl md:text-6xl font-bold text-gray-600 p-5 md:p-10 font-serif">
 						Sizes
 					</h1>
@@ -180,7 +187,7 @@ function App() {
 				</div>
 
 				{/* Contact Info */}
-				<div className="w-full flex flex-col items-center bg-gray-200 p-10">
+				<div className="w-full flex flex-col items-center bg-gray-200 p-10 relative z-10">
 					<h2 className="text-5xl font-serif pb-3">Contact Us</h2>
 					<table className="text-xl md:text-3xl text-gray-800 font-serif m-2 md:m-5">
 						<tbody>
@@ -231,7 +238,7 @@ function App() {
 				</div>
 
 				{/* Footer */}
-				<div className="w-full flex flex-col items-center bg-gray-400 p-1 md:p-5">
+				<div className="relative z-10 w-full flex flex-col items-center bg-gray-400 p-1 md:p-5">
 					<p className="font-sans text-white ">
 						&copy; Pronto Cafe 2025
 					</p>
